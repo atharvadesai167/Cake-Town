@@ -7,7 +7,7 @@ import { FaCakeCandles } from "react-icons/fa6";
 
 export default function Footer() {
     return (
-        <footer className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-100 border-t border-orange-200">
+        <footer className="relative overflow-hidden bg-linear-to-br from-orange-50 via-white to-orange-100 border-t border-orange-200">
 
             {/* Background Text */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

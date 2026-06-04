@@ -69,7 +69,7 @@ export default function Hero() {
                                 Crafting
                             </span>
 
-                            <span className="relative block text-orange-600 h-[90px] md:h-[110px] overflow-hidden">
+                            <span className="relative block text-orange-600 h-22.5 md:h-27.5 overflow-hidden">
 
                                 {titles.map((title, index) => (
                                     <motion.span

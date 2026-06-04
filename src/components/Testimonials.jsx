@@ -98,7 +98,7 @@
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
-                            className="relative min-h-[350px]"
+                            className="relative min-h-87.5"
                         >
                             {testimonials.map((testimonial, index) => (
                                 <motion.div
