@@ -22,7 +22,7 @@ export default function Navbar() {
                             <span className="font-medium text-xl sm:text-2xl md:text-3xl">
                                 Cake
                             </span>
-                            <span className="text-orange-400 font-bold text-xl sm:text-2xl md:text-3xl">
+                            <span className="text-orange-600 font-bold text-xl sm:text-2xl md:text-3xl">
                                 Town
                             </span>
                         </span>
