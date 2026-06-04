@@ -20,10 +20,10 @@ export default function Hero() {
     }, []);
 
     return (
-        <section 
-         id="Home"  
-        className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8">
-
+        <section
+            id="Home"
+            className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 md:pt-0"
+        >
             {/* Mouse Glow */}
             <div
                 className="absolute inset-0 opacity-30"
@@ -67,7 +67,6 @@ export default function Hero() {
                             <button className="px-6 py-3 bg-orange-600 text-white rounded-xl hover:bg-orange-500 transition">
                                 View Gallery
                             </button>
-
                         </div>
                     </motion.div>
 

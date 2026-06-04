@@ -4,8 +4,9 @@ import { RxCross2 } from "react-icons/rx";
 
 export default function Navbar() {
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+
     return (
-        <nav className="fixed top-0 w-screen z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm">
+        <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between flex-row gap-8 items-center h-14 sm:h-16 md:h-20">
 
@@ -30,51 +31,78 @@ export default function Navbar() {
 
                     {/* Nav Links */}
                     <div className="hidden md:flex ml-auto items-center space-x-6 lg:space-x-8">
-                        <a href="#Home" className="text-black hover:text-orange-400 text-sm lg:text-base">
+                        <a
+                            href="#Home"
+                            className="text-black hover:text-orange-400 text-sm lg:text-base"
+                        >
                             Home
                         </a>
 
-                        <a href="#About" className="text-black hover:text-orange-400 text-sm lg:text-base">
+                        <a
+                            href="#About"
+                            className="text-black hover:text-orange-400 text-sm lg:text-base"
+                        >
                             About
                         </a>
 
-                        <a href="#Testimonials" className="text-black hover:text-orange-400 text-sm lg:text-base">
+                        <a
+                            href="#Testimonials"
+                            className="text-black hover:text-orange-400 text-sm lg:text-base"
+                        >
                             Testimonials
                         </a>
                     </div>
 
-                    <button className="md:hidden p-2 text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400" onClick={() => setMobileMenuIsOpen((prev) => !prev)}>
-                        {mobileMenuIsOpen ? (<RxCross2 className="h-6 w-6 cursor-pointer" aria-hidden="true" />) : (
-                        <MenuIcon className="h-6 w-6 cursor-pointer" aria-hidden="true" />
-                        )
-                        }
+                    <button
+                        className="md:hidden p-2 text-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400"
+                        onClick={() => setMobileMenuIsOpen((prev) => !prev)}
+                    >
+                        {mobileMenuIsOpen ? (
+                            <RxCross2
+                                className="h-6 w-6 cursor-pointer"
+                                aria-hidden="true"
+                            />
+                        ) : (
+                            <MenuIcon
+                                className="h-6 w-6 cursor-pointer"
+                                aria-hidden="true"
+                            />
+                        )}
                     </button>
                 </div>
             </div>
 
             {mobileMenuIsOpen && (
-            <div className="md:hidden bg-white-100/95 backdrop-blur-lg border-t border-gray-200 animate-in slide-in-from-top duration-300">
-                <div className="px-4 py-4 sm:px-6 space-y-3 sm:space-y-4">
+                <div className="md:hidden bg-white-100/95 backdrop-blur-lg border-t border-gray-200 animate-in slide-in-from-top duration-300">
+                    <div className="px-4 py-4 sm:px-6 space-y-3 sm:space-y-4">
 
-                    <a href="#Home" 
-                    onClick={() => setMobileMenuIsOpen(false)}
-                    className="block text-black hover:text-orange-400 text-sm lg:text-base">
+                        <a
+                            href="#Home"
+                            onClick={() => setMobileMenuIsOpen(false)}
+                            className="block text-black hover:text-orange-400 text-sm lg:text-base"
+                        >
                             Home
                         </a>
 
-                        <a href="#About"
-                        onClick={() => setMobileMenuIsOpen(false)}
-                         className="block text-black hover:text-orange-400 text-sm lg:text-base">
+                        <a
+                            href="#About"
+                            onClick={() => setMobileMenuIsOpen(false)}
+                            className="block text-black hover:text-orange-400 text-sm lg:text-base"
+                        >
                             About
                         </a>
 
-                        <a href="#Testimonials" 
-                        onClick={() => setMobileMenuIsOpen(false)}
-                        className="block text-black hover:text-orange-400 text-sm lg:text-base">
+                        <a
+                            href="#Testimonials"
+                            onClick={() => setMobileMenuIsOpen(false)}
+                            className="block text-black hover:text-orange-400 text-sm lg:text-base"
+                        >
                             Testimonials
-                        </a></div>
+                        </a>
+
+                    </div>
                 </div>
-                )}
+            )}
         </nav>
     );
 }
