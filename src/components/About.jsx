@@ -63,7 +63,7 @@ export default function About() {
 
                             <div>
                                 <h3 className="text-3xl font-bold text-orange-600">
-                                    100+
+                                    800+
                                 </h3>
                                 <p className="text-gray-600">
                                     Cakes Created
@@ -72,7 +72,7 @@ export default function About() {
 
                             <div>
                                 <h3 className="text-3xl font-bold text-orange-600">
-                                    50+
+                                    500+
                                 </h3>
                                 <p className="text-gray-600">
                                     Happy Clients
