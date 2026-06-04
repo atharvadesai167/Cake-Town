@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 export default function Hero() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+    const titles = [
+        "Sweet Memories",
+        "Sugar Dreams",
+        "Birthday Smiles",
+        "Cake Magic",
+        "Sweet Moments",
+    ];
+
+    const [titleIndex, setTitleIndex] = useState(0);
+
     useEffect(() => {
         const handleMouseMove = (event) => {
             setMousePosition({
@@ -17,6 +27,14 @@ export default function Hero() {
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
         };
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTitleIndex((prev) => (prev + 1) % titles.length);
+        }, 2500);
+
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -45,12 +63,40 @@ export default function Hero() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-
                         <h1 className="mt-4 text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                            Crafting
-                            <span className="text-orange-600">
-                                {" "}Sweet Memories
+
+                            <span className="block">
+                                Crafting
                             </span>
+
+                            <span className="relative block text-orange-600 h-[90px] md:h-[110px] overflow-hidden">
+
+                                {titles.map((title, index) => (
+                                    <motion.span
+                                        key={title}
+                                        className="absolute left-0 top-0"
+                                        initial={{ opacity: 0, y: 50 }}
+                                        animate={
+                                            titleIndex === index
+                                                ? {
+                                                      opacity: 1,
+                                                      y: 0,
+                                                  }
+                                                : {
+                                                      opacity: 0,
+                                                      y: -50,
+                                                  }
+                                        }
+                                        transition={{
+                                            duration: 0.5,
+                                        }}
+                                    >
+                                        {title}
+                                    </motion.span>
+                                ))}
+
+                            </span>
+
                         </h1>
 
                         <p className="mt-6 text-lg text-gray-700 max-w-xl leading-relaxed">
