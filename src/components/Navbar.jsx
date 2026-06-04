@@ -29,7 +29,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Nav Links */}
-                    <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <div className="hidden md:flex ml-auto items-center space-x-6 lg:space-x-8">
                         <a href="#Home" className="text-black hover:text-orange-400 text-sm lg:text-base">
                             Home
                         </a>

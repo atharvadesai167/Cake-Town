@@ -20,7 +20,9 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8">
+        <section 
+         id="Home"  
+        className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8">
 
             {/* Mouse Glow */}
             <div
@@ -77,7 +79,7 @@ export default function Hero() {
                         className="flex justify-center"
                     >
                         <motion.img
-                            src="./cake.jpg"
+                            src="/cake.jpg"
                             alt="CakeTown Showcase"
                             className="w-full max-w-lg object-contain"
                             animate={{
