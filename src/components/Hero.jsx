@@ -45,9 +45,6 @@ export default function Hero() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-orange-600 font-medium tracking-wider uppercase">
-                            Welcome to CakeTown
-                        </span>
 
                         <h1 className="mt-4 text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
                             Crafting
