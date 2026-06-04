@@ -8,7 +8,7 @@
    return (
       <>
          <Navbar />
-         <Hero />
+         <div className="mt-2"><Hero /></div>
          <About />
          <Testimonials />
          <Footer />
