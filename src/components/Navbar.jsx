@@ -13,7 +13,7 @@ export default function Navbar() {
                     <div className="flex items-center space-x-1 group cursor-pointer">
                         <div>
                             <img
-                                src="/logo.png"
+                                src="/cakelogo.png"
                                 alt="Caketown"
                                 className="h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16"
                             />
