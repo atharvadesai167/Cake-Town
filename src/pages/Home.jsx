@@ -2,7 +2,8 @@
  import Hero from "../components/Hero";
  import About from "../components/About";
  import Testimonials from "../components/Testimonials";
- import Footer from "../components/Footer";
+ import Credits from "../components/Credits";
+ 
 
  export default function Home() {
    return (
@@ -11,7 +12,6 @@
          <div className="mt-2"><Hero /></div>
          <About />
          <Testimonials />
-         <Footer />
       </>
    );
  }

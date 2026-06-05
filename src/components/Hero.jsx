@@ -14,6 +14,23 @@ export default function Hero() {
 
     const [titleIndex, setTitleIndex] = useState(0);
 
+    const cakes = [
+        "/cake1.jpg",
+        "/cake2.jpg",
+        "/cake3.jpg",
+        "/cake4.jpg",
+        "/cake5.jpg",
+    ];
+
+    const [cakeIndex, setCakeIndex] = useState(0);
+
+
+    useEffect(() => {
+         const cakeInterval = setInterval(() => {
+            setCakeIndex((prev) => (prev + 1) % cakes.length);
+         }, 4000);
+    }, []);
+
     useEffect(() => {
         const handleMouseMove = (event) => {
             setMousePosition({
@@ -121,16 +138,23 @@ export default function Hero() {
                         className="flex justify-center"
                     >
                         <motion.img
-                            src="/cake.jpg"
-                            alt="CakeTown Showcase"
-                            className="w-full max-w-lg object-contain"
+                            key={cakeIndex}
+                            src={cakes[cakeIndex]}
+                            className="w-full max-w-lg object-contain rounded-2xl"
+                            initial={{ opacity: 0, x: 100 }}
                             animate={{
-                                y: [0, -15, 0],
+                                opacity: 1,
+                                x: 0,
+                                y:[0,-15,0],
                             }}
+
                             transition={{
-                                duration: 4,
-                                repeat: Infinity,
-                                ease: "easeInOut",
+                                duration: 0.8,
+                                y: {
+                                    duration: 4,
+                                    repeat:Infinity,
+                                    ease: "easeInOut",
+                                },
                             }}
                         />
                     </motion.div>

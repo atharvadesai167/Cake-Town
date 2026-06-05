@@ -19,7 +19,7 @@ export default function About() {
                         className="flex justify-center"
                     >
                         <img
-                            src="/cake2.jpg"
+                            src="/cake7.jpg"
                             alt="About CakeTown"
                             className="w-full max-w-md rounded-3xl shadow-xl"
                         />
