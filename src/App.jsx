@@ -7,7 +7,7 @@ import Credits from "./components/Credits";
 function App() {
   return (
     <BrowserRouter>
-    <div className="min-h-screen bg-amber-100 overflow-hidden">
+    <div className="min-h-screen bg-orange-50/95 overflow-hidden">
 
       <Routes>
         <Route path="/" element={<Home />} />
