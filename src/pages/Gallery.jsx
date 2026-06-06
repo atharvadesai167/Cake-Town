@@ -14,6 +14,38 @@ export default function Gallery() {
     const [activeCategory, setActiveCategory] = useState("All");
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const cakes = [
+        {
+            name: "Cake 1",
+            image: "/cake1.jpg",
+            category: "Birthday",
+        },
+
+        {
+            name: "Cake 2",
+            image: "/cake2.jpg",
+            category: "Wedding Anniversary",
+        },
+
+        {
+            name: "Cake 3",
+            image: "/cake3.jpg",
+            category: "Event",
+        },
+
+        {
+            name: "Cake 4",
+            image: "/cake4.jpg",
+            category: "Birthday",
+        },
+
+        {
+            name: "Cake 5",
+            image: "/cake5.jpg",
+            category: "Wedding Anniversary",
+        },
+    ];
+
     return (
         <div className="min-h-screen bg-orange-50 relative overflow-hidden">
 
@@ -40,6 +72,36 @@ export default function Gallery() {
                 <p className="text-center mt-3 text-gray-600">
                     Browse through all of our cake creations
                 </p>
+
+                {/* CAKE GRID */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+
+                    {cakes.map((cake) => (
+
+                        <div
+                            key={cake.name}
+                            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2"
+                        >
+
+                            <img
+                                src={cake.image}
+                                alt={cake.name}
+                                className="w-full h-72 object-cover"
+                            />
+
+                            <div className="p-4">
+
+                                <h3 className="text-xl font-bold text-gray-800">
+                                    {cake.name}
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    ))}
+
+                </div>
 
             </div>
 
