@@ -31,26 +31,28 @@ export default function Navbar() {
 
                     {/* Nav Links */}
                     <div className="hidden md:flex ml-auto items-center space-x-6 lg:space-x-8">
+
                         <a
-                            href="#Home"
+                            href="/#Home"
                             className="text-black hover:text-orange-400 text-sm lg:text-base"
                         >
                             Home
                         </a>
 
                         <a
-                            href="#About"
+                            href="/#About"
                             className="text-black hover:text-orange-400 text-sm lg:text-base"
                         >
                             About
                         </a>
 
                         <a
-                            href="#Testimonials"
+                            href="/#Testimonials"
                             className="text-black hover:text-orange-400 text-sm lg:text-base"
                         >
                             Testimonials
                         </a>
+
                     </div>
 
                     <button
@@ -77,7 +79,7 @@ export default function Navbar() {
                     <div className="px-4 py-4 sm:px-6 space-y-3 sm:space-y-4">
 
                         <a
-                            href="#Home"
+                            href="/#Home"
                             onClick={() => setMobileMenuIsOpen(false)}
                             className="block text-black hover:text-orange-400 text-sm lg:text-base"
                         >
@@ -85,7 +87,7 @@ export default function Navbar() {
                         </a>
 
                         <a
-                            href="#About"
+                            href="/#About"
                             onClick={() => setMobileMenuIsOpen(false)}
                             className="block text-black hover:text-orange-400 text-sm lg:text-base"
                         >
@@ -93,7 +95,7 @@ export default function Navbar() {
                         </a>
 
                         <a
-                            href="#Testimonials"
+                            href="/#Testimonials"
                             onClick={() => setMobileMenuIsOpen(false)}
                             className="block text-black hover:text-orange-400 text-sm lg:text-base"
                         >

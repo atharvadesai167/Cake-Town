@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -124,9 +125,13 @@ export default function Hero() {
                         </p>
 
                         <div className="flex gap-4 mt-8">
-                            <button className="px-6 py-3 bg-orange-600 text-white rounded-xl hover:bg-orange-500 transition">
-                                View Gallery
-                            </button>
+                            <Link 
+                            to="/gallery"
+                            className="px-6 py-3 bg-orange-600 text-white rounded-xl hover:bg-orange-500 transition"
+                        >
+                            View Gallery
+
+                        </Link>    
                         </div>
                     </motion.div>
 

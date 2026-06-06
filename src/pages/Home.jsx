@@ -1,17 +1,26 @@
- import Navbar from "../components/Navbar";
- import Hero from "../components/Hero";
- import About from "../components/About";
- import Testimonials from "../components/Testimonials";
- import Credits from "../components/Credits";
- 
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Testimonials from "../components/Testimonials";
+import Credits from "../components/Credits";
 
- export default function Home() {
+export default function Home() {
    return (
       <>
          <Navbar />
-         <div className="mt-2"><Hero /></div>
-         <About />
-         <Testimonials />
+
+         <div id="Home" className="mt-2">
+            <Hero />
+         </div>
+
+         <div id="About">
+            <About />
+         </div>
+
+         <div id="Testimonials">
+            <Testimonials />
+         </div>
+
       </>
    );
- }
+}
